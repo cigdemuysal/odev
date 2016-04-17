@@ -1,0 +1,91 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/back"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Phone Contact Recovery"
+        android:textSize="28dp"
+        android:gravity="center"
+        android:layout_margin="20dp"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Avea"
+            android:onClick="aveaClick"
+            android:id="@+id/avea" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Turkcell"
+            android:onClick="turkcellClick"
+            android:id="@+id/turkcell" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vodafone"
+            android:onClick="vodafoneClick"
+            android:id="@+id/vodafone" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All"
+            android:id="@+id/all"
+            android:checked="true"
+            android:onClick="allOps"/>
+
+    </RadioGroup>
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="339dp"
+        android:id="@+id/listView" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recover"
+            android:onClick="recover"
+            android:id="@+id/recover"
+            android:layout_weight="1"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back-Up"
+            android:onClick="backup"
+            android:id="@+id/backUp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>
